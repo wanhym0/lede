@@ -89,8 +89,8 @@ jobs:
           # 编译x64固件:
           cat >> .config <<EOF
           CONFIG_TARGET_ipq40xx=y
-          CONFIG_TARGET_ipq40xx_generic=y
-          CONFIG_TARGET_ipq40xx_generic_Default=y
+          # CONFIG_TARGET_ipq40xx_generic=y
+          CONFIG_TARGET_ipq40xx_DEVICE_p2w_r619ac=y
           EOF
           # 固件压缩:
           cat >> .config <<EOF
