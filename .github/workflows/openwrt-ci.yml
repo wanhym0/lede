@@ -9,8 +9,8 @@
 
 name: 竞斗云_0.02
 
-on:
-  push:
+# on:
+#   push:
     branches: 
       - master
   schedule:
