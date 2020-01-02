@@ -1,8 +1,8 @@
 name: 竞斗云_0.0.4
 
-on:
-  push:
-    branches: 
+# on:
+#   push:
+#     branches: 
       - master
   schedule:
      - cron: 0 20 * * *
