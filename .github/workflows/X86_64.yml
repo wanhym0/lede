@@ -7,14 +7,14 @@
 # <https://github.com/KFERMercer/OpenWrt-CI>
 #
 
-name: ¾º¶·ÔÆ_0.0.3
+name: X86_64_0.0.1
 
-# on:
-#   push:
-#     branches: 
-#       - master
-#   schedule:
-#      - cron: 0 20 * * *
+on:
+  push:
+    branches: 
+      - master
+  schedule:
+     - cron: 0 20 * * *
   release:
     types: [published]
 
@@ -59,9 +59,9 @@ jobs:
           rm -f ./.config*
           touch ./.config
           #
-          # ========================¹Ì¼þ¶¨ÖÆ²¿·Ö========================
+          # ========================å›ºä»¶å®šåˆ¶éƒ¨åˆ†========================
           # 
-          # ±àÒëx64¹Ì¼þ:#
+          # ç¼–è¯‘x64å›ºä»¶:#
           cat >> .config <<EOF
           CONFIG_TARGET_x86=y
           CONFIG_TARGET_x86_64=y
@@ -71,7 +71,7 @@ jobs:
           CONFIG_TARGET_PROFILE="Generic"
           CONFIG_TARGET_ARCH_PACKAGES="x86_64"
           EOF
-          # ¹Ì¼þÑ¹Ëõ:
+          # å›ºä»¶åŽ‹ç¼©:
           cat >> .config <<EOF
           CONFIG_DEFAULT_alsa-utils=y
           CONFIG_DEFAULT_ath10k-firmware-qca9888=y
@@ -1056,7 +1056,7 @@ jobs:
           CONFIG_PACKAGE_shellsync=y
           EOF
           # 
-          # ========================¹Ì¼þ¶¨ÖÆ²¿·Ö½áÊø========================
+          # ========================å›ºä»¶å®šåˆ¶éƒ¨åˆ†ç»“æŸ========================
           # 
           sed -i 's/^[ \t]*//g' ./.config
           make defconfig
